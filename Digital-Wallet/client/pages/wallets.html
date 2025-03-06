@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <header>
+       
+        <nav>
+            <div class="logo-main">
+                <img class="logo" src="../assets/white-logo.png" alt="FlickWallet">
+            </div>
+            <h1>Wallets</h1>
+            <a href="../index.html">
+                <button class="logout-btn">
+                    <p>logout</p>
+                </button>
+            </a>
+        </nav>
+    </header>
+
+    <section class="wallets">
+        <h2>My Wallets</h2>
+        <div class="wallet-list">
+            <div class="wallet-info">
+                    <p>Balance: $0</p>
+                    <p>Currency: USD</p>
+                    <button class="add-card-btn" class="add-card-btn">Add Card</button> 
+                <div class="card-info">
+                  <p><strong>Linked Card:</strong> **** **** **** 1234</p>
+                  <button class="update-card-btn">Update Card</button>
+                  <button class="remove-card-btn">Remove Card</button>
+                </div>
+            </div>
+              
+            <div class="add-card-modal" class="modal">
+                <div class="modal-content">
+                  <h3>Add a New Card</h3>                    
+                  <button type="button" class="close-modal-btn">Close</button>
+
+                  <form class="add-card-form">
+                    <button type="button" class="close-modal-btn">Close</button>
+                    <label for="card-type">Card Type</label>
+                    <input type="text" class="card-type" name="card-type" required><br>
+                    
+                    <label for="card-name">Name</label>
+                    <input type="text" class="card-name" name="card-name" required><br>
+                    
+                    <label for="expiry-date">Expiration Date</label>
+                    <input type="month" class="expiry-date" name="expiry-date" required>
+                    
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="cvv" name="cvv" required>
+                    
+                    <button type="submit">Add Card</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+        <button class="add-wallet-btn">Add Wallet</button>
+    </section>
+
+    <div class="add-wallet-modal" class="modal">
+        <div class="modal-content">
+            <h3>Add New Wallet</h3>
+            <form class="add-wallet-form">
+                <label for="wallet-name">Wallet Name:</label>
+                <input type="text" class="wallet-name" name="wallet-name" required>
+                
+                <label for="wallet-type">Wallet Type:</label>
+                <select class="wallet-type" name="wallet-type">
+                    <option value="personal">Personal</option>
+                    <option value="business">Business</option>
+                </select>
+                <label for="currency">Currency:</label>
+                <select class="currency" name="currency">
+                    <option value="USD">USD</option>
+                    <option value="LB">LB</option>
+                </select>
+                <button type="submit">Add Wallet</button>
+            </form>
+            <button class="close-modal-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
